@@ -1,0 +1,15 @@
+create table partners(
+partners_id serial primary key,
+type_partner varchar(50),
+company_name varchar(50),
+director_name varchar(50),
+phone varchar(50),
+rating int
+)
+
+create table partnerproduct(
+pp_id serial primary key,
+id_partner int references partners(partners_id),
+id_product int,
+count_product int
+)
